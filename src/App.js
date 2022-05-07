@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Box, CssBaseline } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Container>
+        <Box className="p-6">
+          <h1 className="text-4xl mb-2">
+            Task Management App
+          </h1>
+          <p>
+            Init!
+          </p>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 }
 
