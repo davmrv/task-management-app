@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemIcon, ListItemText, Paper } from '@mui/material';
+import { Box, List, ListItemButton, ListItemIcon, ListItemText, Paper } from '@mui/material';
 import { DashboardOutlined, List as ListIcon } from '@mui/icons-material';
 import logo from '../Assets/logo.svg';
 
@@ -9,22 +9,22 @@ export default function Sidebar() {
         <img src={logo} alt='logo' className='w-12 mb-6' />
         <Box className='w-full'>
         <List>
-          <ListItem selected>
+          <ListItemButton selected>
             <ListItemIcon>
               <DashboardOutlined />
             </ListItemIcon>
             <ListItemText>
               Dashboard
             </ListItemText>
-          </ListItem>
-          <ListItem>
+          </ListItemButton>
+          <ListItemButton>
             <ListItemIcon>
               <ListIcon />
             </ListItemIcon>
             <ListItemText>
               My Tasks
             </ListItemText>
-          </ListItem>
+          </ListItemButton>
         </List>
         </Box>
       </Paper>

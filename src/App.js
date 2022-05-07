@@ -1,25 +1,11 @@
 import { Container, CssBaseline } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Sidebar from './Components/Sidebar';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        elevation: {
-          borderRadius: 20,
-        }
-      }
-    }
-  },
-});
+import theme from './Config/theme';
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container className='flex h-screen py-6'>
         <Sidebar />
