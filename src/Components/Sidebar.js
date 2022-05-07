@@ -8,7 +8,7 @@ export default function Sidebar() {
       <Paper className='h-full flex flex-col items-center py-4 rounded-xl'>
         <img src={logo} alt='logo' className='w-12 mb-6' />
         <Box className='w-full'>
-        <List>
+        <List className='uppercase'>
           <ListItemButton selected>
             <ListItemIcon>
               <DashboardOutlined />
