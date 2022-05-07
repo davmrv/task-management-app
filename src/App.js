@@ -1,10 +1,19 @@
-import { Container, Box, CssBaseline, Paper } from '@mui/material';
+import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import logo from './Assets/logo.svg';
+import Sidebar from './Components/Sidebar';
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        elevation: {
+          borderRadius: 20,
+        }
+      }
+    }
   },
 });
 
@@ -13,11 +22,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container className='flex h-screen py-6'>
-        <Box className='w-1/5 h-full'>
-          <Paper className='h-full flex flex-col items-center py-4 px-6'>
-            <img src={logo} alt='logo' className='w-12' />
-          </Paper>
-        </Box>
+        <Sidebar />
       </Container>
     </ThemeProvider>
   );
