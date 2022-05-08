@@ -1,4 +1,5 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, palette } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
 
 export default createTheme({
   palette: {
@@ -9,6 +10,20 @@ export default createTheme({
       styleOverrides: {
         elevation: {
           borderRadius: 20,
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 10,
+          backgroundColor: grey[900],
+          '.MuiOutlinedInput-notchedOutline': {
+            border: 'none',
+          },
+          '.MuiInputAdornment-root': {
+            color: grey[700],
+          },
         },
       },
     },

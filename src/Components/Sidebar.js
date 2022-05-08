@@ -4,7 +4,7 @@ import logo from '../Assets/logo.svg';
 
 export default function Sidebar() {
   return (
-    <Box className='w-1/5 h-full'>
+    <Box className='w-1/4 h-full'>
       <Paper className='h-full flex flex-col items-center py-4 rounded-xl'>
         <img src={logo} alt='logo' className='w-12 mb-6' />
         <Box className='w-full'>
