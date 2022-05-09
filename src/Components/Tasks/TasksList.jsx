@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Typography,
   Stack,
@@ -8,7 +9,7 @@ import { useQuery } from '@apollo/client';
 import getTasks from '../../GraphQL/Queries/getTasks';
 import TaskCard from './TaskCard';
 
-export default function TasksList({ status, title }) {
+function TasksList({ status, title }) {
   const { loading, data } = useQuery(getTasks, {
     variables: {
       status,
@@ -36,3 +37,10 @@ export default function TasksList({ status, title }) {
     </Box>
   );
 }
+
+TasksList.propTypes = {
+  status: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default TasksList;

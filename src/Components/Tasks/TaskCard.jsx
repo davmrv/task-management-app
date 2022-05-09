@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardContent,
@@ -12,7 +13,7 @@ import {
 } from '@mui/material';
 import { MoreHoriz } from '@mui/icons-material';
 
-export default function TaskCard({ task }) {
+function TaskCard({ task }) {
   return (
     <Card key={task.id}>
       <CardHeader
@@ -46,3 +47,13 @@ export default function TaskCard({ task }) {
     </Card>
   );
 }
+
+TaskCard.propTypes = {
+  task: PropTypes.exact({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
+
+export default TaskCard;
