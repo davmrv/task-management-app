@@ -7,6 +7,7 @@ export default gql`
       name
       status
       tags
+      pointEstimate
     }
   }
 `;

@@ -12,6 +12,7 @@ import {
   Avatar,
 } from '@mui/material';
 import { MoreHoriz } from '@mui/icons-material';
+import EstimationPoints from '../../Lib/EstimationPoints';
 
 function TaskCard({ task }) {
   return (
@@ -28,7 +29,7 @@ function TaskCard({ task }) {
         <Stack spacing={1}>
           <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography variant="body2">
-              4 Points
+              {`${EstimationPoints.getNumberFromName(task.pointEstimate)} Points`}
             </Typography>
             <Chip label="Today" />
           </Stack>
@@ -53,6 +54,7 @@ TaskCard.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
+    pointEstimate: PropTypes.string,
   }).isRequired,
 };
 

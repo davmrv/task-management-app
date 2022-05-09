@@ -13,7 +13,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container>
-          <div className="flex h-screen py-6 gap-6">
+          <div className="flex min-h-screen py-6 gap-6 items-stretch">
             <Sidebar />
             <Body />
           </div>
