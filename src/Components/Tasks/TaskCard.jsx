@@ -42,7 +42,7 @@ function TaskCard({ task }) {
       </CardContent>
       <CardActions>
         <Stack direction="row">
-          <Avatar src="https://i.pravatar.cc/300" sx={{ height: 32, width: 32 }} />
+          <Avatar src={task.assignee.avatar} sx={{ height: 32, width: 32 }} />
         </Stack>
       </CardActions>
     </Card>
@@ -55,6 +55,9 @@ TaskCard.propTypes = {
     name: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     pointEstimate: PropTypes.string,
+    assignee: PropTypes.exact({
+      avatar: PropTypes.string,
+    }),
   }).isRequired,
 };
 

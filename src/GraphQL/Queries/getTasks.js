@@ -8,6 +8,9 @@ export default gql`
       status
       tags
       pointEstimate
+      assignee {
+        avatar
+      }
     }
   }
 `;
