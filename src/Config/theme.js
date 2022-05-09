@@ -1,4 +1,4 @@
-import { createTheme, palette } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
 import customColors from './customColors';
 
