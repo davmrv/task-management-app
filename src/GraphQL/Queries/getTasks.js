@@ -8,6 +8,7 @@ export default gql`
       status
       tags
       pointEstimate
+      dueDate
       assignee {
         avatar
       }

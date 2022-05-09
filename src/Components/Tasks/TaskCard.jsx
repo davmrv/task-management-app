@@ -12,6 +12,8 @@ import {
   Avatar,
 } from '@mui/material';
 import { MoreHoriz } from '@mui/icons-material';
+import moment from 'moment';
+
 import EstimationPoints from '../../Lib/EstimationPoints';
 
 function TaskCard({ task }) {
@@ -31,7 +33,7 @@ function TaskCard({ task }) {
             <Typography variant="body2">
               {`${EstimationPoints.getNumberFromName(task.pointEstimate)} Points`}
             </Typography>
-            <Chip label="Today" />
+            <Chip label={moment(task.dueDate).fromNow()} />
           </Stack>
           <Stack direction="row" spacing={1}>
             {
@@ -58,6 +60,7 @@ TaskCard.propTypes = {
     assignee: PropTypes.exact({
       avatar: PropTypes.string,
     }),
+    dueDate: PropTypes.string,
   }).isRequired,
 };
 
